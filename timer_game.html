@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>秒当てゲーム</title>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- /Bootstrap -->
+
+</head>
+<body>
+<div>
+    <div id="container">
+        <h3>0秒でとめろ!!</h3>
+
+        <!-- トップページ -->
+        <div id="page1">
+            <div class="mContainer">
+                <img id="mainImg" src="./img/20sec_02.png" alt="時計">
+            </div>
+
+            <!-- button -->
+            <div>
+                <button id="20" type="button" class="secBtn">Click to Start</button>
+            </div>
+        </div>
+
+        <!-- 計測ページ -->
+        <div id="page2" class="displayNone">
+
+            <!-- カウントダウン -->
+            <div class="mContainer">
+                <p id="count" class="count">30</p>
+                <p id="question" class="displayNone counter">??.???</p>
+            </div>
+
+            <!-- button -->
+            <div>
+                <button id="stopBtn" type="button" class="stopBtn inactive">ストップ！</button>
+            </div>
+        </div>
+
+        <!-- 結果ページ -->
+        <div id="page3" class="displayNone">
+            <div class="mContainer">
+                <h3 id="rsltMsg"></h3>
+            <p id="rslt" class="counter"><span id="rsltSec"></span></p>
+            </div>
+
+            <!-- button -->
+            <div>
+                <button id="rtnBtn" type="button" class="rtnBtn">戻る</button>
+            </div>
+        </div>
+    </div>
+    <img src="./img/backimage01.jpg" alt="space" id="bgimage">
+</div>
+    <script src="js/main.js"></script>
+</body>
+</html>
