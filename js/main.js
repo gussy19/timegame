@@ -1,6 +1,9 @@
 'use strict';
 
 {
+    // クリアフラグを定義。クリアしたら1
+    let clearFlag = 0;
+
     /* 変数定義 */
     const count = document.getElementById('count');
     const stop = document.getElementById('stopBtn');
@@ -106,11 +109,13 @@
 
         // ストップした時の残り時間が0±1であるかどうかの判定
         if (sec == '00' && msec == '000') {
-            rsltMsg.textContent = 'あなたは答えをしっている！';
+            rsltMsg.textContent = 'Clear!!!!! あなたは答えをしっている！';
+            clearFlag = 1;
         } else if (sec == '00' || sec == '01' && msec == '000') {
-            rsltMsg.textContent = '答えまでもう一歩！';
+            rsltMsg.textContent = 'Clear!!    ピッタリまでもう一歩！';
+            clearFlag = 1;
         } else {
-            rsltMsg.textContent = 'Always Ask "Why me？"';
+            rsltMsg.textContent = 'Game Over...  Always Ask "Why me？"';
         }
 
         // pege切り替え（結果ページへ）
